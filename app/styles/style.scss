@@ -1,0 +1,177 @@
+@import "variables";
+@import "globals";
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .icons-container {
+    width: 85%;
+    height: 200px;
+    background-color: $DarkBlue;
+    border-radius: 10px;
+    border-top-right-radius: 5rem;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    .icons-wrapper {
+      margin-top: 30px;
+
+      .icon-bg {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
+        background-color: $VeryDarkBlue;
+        border-radius: 8px;
+        float: left;
+        margin-right: 15px;
+
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .stats-container {
+    position: relative;
+    width: 85%;
+    height: 150px;
+    margin-top: 15px;
+    padding: 30px;
+    background-color: $DarkBlue;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    .bar-wrapper {
+      width: 100%;
+      height: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      padding: 3px;
+      background-color: $VeryDarkBlue;
+
+      .bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 70%;
+        height: 15px;
+        padding: 2px;
+        border-radius: 10px;
+        background-image: linear-gradient(
+          to right,
+          hsl(6, 100%, 80%),
+          hsl(335, 100%, 65%)
+        );
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .texts {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .box {
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translate(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 70px;
+      background-color: #fff;
+      color: $GrayishBlue;
+      border-radius: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+
+      b {
+        font-size: 40px;
+        margin-right: 10px;
+        color: #000;
+      }
+
+      @media screen and (max-width: 320px) {
+        top: 135px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg-img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .main-container {
+    flex-direction: row;
+    width: 90%;
+
+    .icons-container {
+      width: 30%;
+    }
+
+    .stats-container {
+      width: 60%;
+      margin-top: 50px;
+      margin-left: 20px;
+      text-align: left;
+
+      .box {
+        top: -40px;
+        left: 520px;
+        transform: none;
+
+        .box-part {
+          position: absolute;
+          top: 60px;
+          left: 140px;
+          width: 0;
+          height: 0;
+          border-top: 30px solid #fff;
+          border-left: 40px solid transparent;
+        }
+      }
+    }
+  }
+}

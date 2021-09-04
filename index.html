@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 35%, 72%);
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-img"></div>
+
+    <div class="main-container">
+      <div class="icons-container">
+        <div class="logo-wrapper">
+          <img src="images/logo.svg" alt="Fylo" />
+        </div>
+
+        <div class="icons-wrapper">
+          <div class="icon-bg">
+            <img src="images/icon-document.svg" alt="Document" class="icon" />
+          </div>
+
+          <div class="icon-bg">
+            <img src="images/icon-folder.svg" alt="Folder" class="icon" />
+          </div>
+
+          <div class="icon-bg">
+            <img src="images/icon-upload.svg" alt="Upload" class="icon" />
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-container">
+        You've used <b>815 GB</b> of your storage
+        <div class="bar-wrapper">
+          <div class="bar">
+            <div class="dot"></div>
+          </div>
+        </div>
+        <div class="texts">
+          <div class="item">0 GB</div>
+          <div class="item">100 GB</div>
+        </div>
+
+        <div class="box">
+          <b>185</b> GB left
+          <div class="box-part"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/basakdonder">Başak Dönder</a>.
+    </div>
+  </body>
+</html>
